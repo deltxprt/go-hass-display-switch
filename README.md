@@ -1,0 +1,1 @@
+# go-hass-display-switch
