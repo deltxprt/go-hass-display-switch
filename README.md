@@ -6,7 +6,7 @@ This is a small piece of program that watch an MQTT topic and paste the value of
 
 ## Requirements
 
-You need to have [`ddccontrol`]("https://github.com/ddccontrol/ddccontrol?tab=readme-ov-file") installed
+You need to have [ddccontrol]("https://github.com/ddccontrol/ddccontrol?tab=readme-ov-file") installed
 
 ## Installation
 
