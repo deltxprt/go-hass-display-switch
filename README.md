@@ -8,15 +8,19 @@ This is a small piece of program that watch an MQTT topic and paste the value of
 
 You need to have [`ddccontrol`]("https://github.com/ddccontrol/ddccontrol?tab=readme-ov-file") installed
 
+## Installation
+
+Download the latest package in the [release page](https://github.com/deltxprt/go-hass-display-switch/releases)
+
 ## Configuration
 
 the program only needs 2 parameters:
 
 1. url:
-    Format: mqtt://username:password@homeassistant.example.com:1883/topic
+    - Format: `mqtt://username:password@homeassistant.example.com:1883/topic`
 2. Device:
-    Format: /dev/i2c-2
-    Hint: using `ddccontrol -p` will show the i2c path of the display you wish to control
+    - Format: /dev/i2c-2
+    - Hint: using `ddccontrol -p` will show the i2c path of the display you wish to control
 
 ## Adhoc usage
 
@@ -39,7 +43,7 @@ Description=Display Switcher service made in GO
 After=network.target
 
 [Service]
-EnvironmentFile=/default/go-hass-ds
+EnvironmentFile=/etc/default/go-hass-ds
 ExecStart=/usr/bin/go-hass-display-switch -url ${URL} -device ${DEVICE}
 Type=notify
 Restart=always
@@ -49,7 +53,3 @@ Restart=always
 WantedBy=default.target
 RequiredBy=network.target
 ```
-
-## Installation
-
-`curl "https://raw.githubusercontent.com/deltxprt/go-hass-display-switch/v1.0.2/install.sh" | sudo bash`
